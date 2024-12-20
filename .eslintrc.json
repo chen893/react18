@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended" // 启用 Prettier 支持并禁用冲突的 ESLint 规则
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "off", // 允许使用 console 语句
+    "no-debugger": "warn", // 对 debugger 发出警告
+    "eqeqeq": "error", // 强制使用 === 和 !==
+    "no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^_" } // 忽略未使用的函数参数（例如 _props）
+    ],
+    "prefer-const": "error", // 优先使用 const
+    "prettier/prettier": "error" // 将 Prettier 规则作为错误处理
+  }
+}
